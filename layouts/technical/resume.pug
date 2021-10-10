@@ -1,0 +1,97 @@
+html.zoom
+  head
+    link(rel='stylesheet', href='resume.css' type='text/css')
+    script(src='resume.js')
+  body.body-outline
+    a(href=pdfName).accent.downloadpdf ⬇ Download PDF
+    #body-wrapper
+      #title-section
+        .title #{r.header.title}
+        .links
+          each l in r.header.links
+            - url = l[1]
+            a(href=url) #{l[0]}
+      .section-wrapper
+        .section-header #{r.education.header}
+        .section-line
+      each edu in r.education.educations
+        .experience-header
+          .left
+            .accent #{edu.degree}
+            .text , #{edu.institution}
+            if edu.dates.length == 2
+              .text , #{edu.location} (#{edu.dates[0]} - #{edu.dates[1]})
+            else if edu.dates.length == 1
+              .text , #{edu.location} (#{edu.dates[0]})
+        .text-wrapper
+          if edu.summary
+            .text #{edu.summary}
+          ul
+            if edu.points
+              each p in edu.points
+                li
+                  .text-point #{p}
+      .section-wrapper
+        .section-header #{r.experience.header}
+        .section-line
+      each ex in r.experience.experiences
+        .experience-header
+          .left
+            .accent #{ex.position} - #{ex.company}
+            if ex.links
+              .text ,&nbsp
+              each l in ex.links
+                - url = l[1]
+                a(href=url).text #{l[0]}
+            if ex.dates.length == 2
+              .text , #{ex.location} (#{ex.dates[0]} - #{ex.dates[1]})
+            else if ex.dates.length == 1
+              .text , #{ex.location} (#{ex.dates[0]})
+          - var tech = ex.tech.join(', ')
+          .right.accent #{tech}
+        .text-wrapper
+          if ex.summary
+            .text #{ex.summary}
+          ul
+            if ex.points
+              each p in ex.points
+                li
+                  .text-point #{p}
+      .section-wrapper
+        .section-header #{r.projects.header}
+        .section-line
+      each pr in r.projects.projects
+        .experience-header
+          .left
+            .accent #{pr.title}
+            if pr.links
+              .text ,&nbsp
+              each l in pr.links
+                - url = l[1]
+                a(href=url).text #{l[0]}
+            if pr.dates.length == 2
+              .text , (#{pr.dates[0]} - #{pr.dates[1]})
+            else if pr.dates.length == 1
+              .text , (#{pr.dates[0]})
+          - var tech = pr.tech.join(', ')
+          .right.accent #{tech}
+        .text-wrapper
+          if pr.summary
+            .text #{pr.summary}
+          ul
+            if pr.points
+              each p in pr.points
+                li
+                  .text-point #{p}
+      .section-wrapper
+        .section-header #{r.skills.header}
+        .section-line
+      each sk in r.skills.skills
+        .skill-header
+          .left
+            .accent #{sk.header}
+          - var list = sk.points.join(', ')
+          .right
+            .text #{list}
+
+    //- #footer-section.accent asdfadfasdfasdf

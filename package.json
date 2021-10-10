@@ -1,0 +1,23 @@
+{
+  "name": "mt-resume",
+  "version": "1.0.0",
+  "description": "Render my resume",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint . --fix",
+    "build": "node build.js",
+    "clean": "rm -rfv dist/*"
+  },
+  "author": "MT",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-google": "^0.14.0",
+    "express": "^4.17.1",
+    "js-yaml": "^4.1.0",
+    "pug": "^3.0.2",
+    "puppeteer": "^10.4.0"
+  }
+}

@@ -1,0 +1,5 @@
+resumeVersion: v1
+resumeLayout: technical
+resumeOutputName: MarcusTanResume
+distPath: dist
+port: 8000

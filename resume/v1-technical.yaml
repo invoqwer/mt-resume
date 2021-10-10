@@ -1,0 +1,220 @@
+header:
+  title: Marcus Tan
+  links:
+    github:
+      - github.com/invoqwer
+      - http://github.com/invoqwer
+    email:
+      - marcus.m.tan@gmail.com
+      - ''
+education:
+  header: Education
+  educations:
+    uoft:
+      institution: The University of Toronto
+      degree: B.Sc Hons, Computer Science
+      location: Toronto, ON.
+      dates:
+        - 2015
+        - 2020
+      # summary: Specialist program in Computer Science.
+      summary: ''
+      points:
+        - >
+          Data Structures & Algorithms, Operating Systems, Functional
+          Programming, Artificial Intelligence
+experience:
+  header: Experience
+  experiences:
+    rubrik2021:
+      company: Rubrik
+      links:
+      position: Software Engineer
+      location: Palo Alto, CA.
+      dates:
+        - Oct. 2020
+        - Present
+      tech:
+        - Scala
+        - Python
+      summary: >
+        Working to support the backup and recovery of VMware virtual machines.
+      points:
+        - >
+          Built new integrations allowing Rubrik to support virtual machines
+          backed by third party Flash Arrays (Pure Storage & Dell EMC.)
+          Implemented end to end and unit test suites for this feature.
+        - >
+          Optimized metadata persistence workflows utilized during replication
+          in order to improve garbage collection performance and reduce Rubrik’s
+          memory footprint.
+        - >
+          Revamped the VMware teams end to end tests and infrastructure in order
+          to reduce flakiness. Improved internal test pipeline pass rate from
+          ~70% to 100% in order to qualify Rubrik’s 5.3 and 6.0 releases.
+    rubrik2019:
+      company: Rubrik
+      links:
+      position: Software Engineer Intern
+      location: Palo Alto, CA.
+      dates:
+        - May. 2019
+        - Aug. 2019
+      tech:
+        - Go
+        - Scala
+        - Python
+      summary: ''
+      points:
+        - >
+          Designed and deployed a Go Thrift server to service internal company
+          VMware API usage. Created API endpoints to support vSphere tagging and
+          I/O filtering. Implemented persistent session management.
+        - >
+          Pushed features to to the Govmomi open source library in order to
+          support specific VMware API endpoints.
+        - >
+          Wrote command line tools, unit testing suites and design documents to
+          ensure project longevity.
+    rubrik2018:
+      company: Rubrik
+      links:
+      position: Software Engineer Intern
+      location: Palo Alto, CA.
+      dates:
+        - Sept. 2018
+        - Dec. 2018
+      tech:
+        - Scala
+        - C++
+        - Python
+        - Bash
+      summary: ''
+      points:
+        - >
+          Created a feature to enable the recovery of enterprise systems
+          utilizing external data encryption protocols. Accomplished this by
+          implementing extended attribute restoration for VMware virtual
+          machines.
+        - >
+          Supported this feature for both Windows and Linux VM’s. Customers
+          could choose to recover their workloads through either VMware tools or
+          the Rubrik agent.
+    teachingassistant:
+      company: The University of Toronto
+      links:
+      position: Teaching Assistant
+      location: Toronto, ON.
+      dates:
+        - Jan. 2018
+        - Jan. 2020
+      tech:
+        - ''
+      summary: ''
+        # Conducted tutorials, provided mentorship and assisted with grading for 4
+        # different course sessions:
+      points:
+        - >
+          Computer Organization (2018), Software Tools & Systems Programming
+          (2019), Programming on the Web (2019)
+    parsehub:
+      company: ParseHub
+      links:
+        website:
+          - parsehub.com
+          - http://parsehub.com/
+      position: Software Engineer Intern
+      location: Toronto, ON.
+      dates:
+        - Nov. 2017
+        - Apr. 2018
+      tech:
+        - Javascript
+      summary: ''
+      points:
+        - >
+          Applied performance optimizations to a distributed web scraping as a
+          service solution.
+        - >
+          Iteratively developed various front end features based on user testing
+          in order to improve usability.
+    brizi:
+      company: Brizi
+      links:
+        website:
+          - brizicam.com
+          - http://brizicam.com/
+      position: Software Engineer
+      location: Toronto, ON.
+      dates:
+        - May. 2014
+        - Dec. 2015
+      tech:
+        - Javascript (Angular)
+      summary: ''
+      points:
+        - >
+          Created web apps allowing fans to view a drone livestream, take a
+          photo and share it to social media.
+        - >
+          Designed a multi queueing system using Redis to distribute user
+          snapshot requests among numerous cameras, allowing users from
+          different locations to take photos concurrently.
+        - >
+          Architected an API using the MEAN stack to manage users, snapshots,
+          payments and Cloudinary image filters.
+projects:
+  header: Projects / Achievements
+  projects:
+    wombocombo:
+      title: >
+        WomboCombo - Winner of the Teach Category: Riot Games Hackathon
+      dates:
+        - 2017
+      tech:
+        - Javascript (Vue)
+      summary: ''
+      points:
+        - >
+          An input visualization tool for a hackathon focussed on improving
+          League of Legends player experience.
+    scdownloader:
+      title: >
+        SoundCloud Downloader
+      links:
+        github:
+          - github.com/invoqwer/soundcloud-downloader
+          - http://github.com/invoqwer/soundcloud-downloader
+      dates:
+        - 2017
+      tech:
+        - Javascript (Phantom)
+      summary: ''
+      points:
+        - >
+          A tool to scrape large sets of mp3 files in parallel from a given
+          stream. Used FFMPEG to write metadata.
+skills:
+  header: Skills
+  skills:
+    languages:
+      header: Languages
+      points:
+        - Python
+        - C
+        - C++
+        - Scala
+        - Java
+        - Go
+        - Bash
+        - SQL
+        - Javascript
+        - HTML/CSS
+    technologies:
+      header: Technologies
+      points:
+        - VMware
+        - Cassandra
+        - Redis
+        - MongoDB
+        - Web Scraping
