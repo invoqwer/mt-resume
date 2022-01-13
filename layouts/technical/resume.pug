@@ -11,6 +11,9 @@ html.zoom
           each l in r.header.links
             - url = l[1]
             a(href=url) #{l[0]}
+      if r.summary
+        .summary-wrapper 
+          .text #{r.summary}
       .section-wrapper
         .section-header #{r.education.header}
         .section-line

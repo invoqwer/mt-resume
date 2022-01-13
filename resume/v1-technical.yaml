@@ -1,12 +1,21 @@
 header:
   title: Marcus Tan
   links:
+    website:
+      - www.invoker.online
+      - http://www.invoker.online
     github:
       - github.com/invoqwer
       - http://github.com/invoqwer
     email:
       - marcus.m.tan@gmail.com
       - ''
+summary: ''
+# summary: >
+#   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+#   incididunt ut labore et dolore magna aliqua. Nunc sed augue lacus viverra.
+#   Eget velit aliquet sagittis id consectetur purus ut faucibus. Velit aliquet
+#   sagittis id consectetur purus ut faucibus.
 education:
   header: Education
   educations:
@@ -17,8 +26,8 @@ education:
       dates:
         - 2015
         - 2020
-      # summary: Specialist program in Computer Science.
       summary: ''
+      # summary: Specialist program in Computer Science.
       points:
         - >
           Data Structures & Algorithms, Operating Systems, Functional
@@ -61,7 +70,7 @@ experience:
         - May. 2019
         - Aug. 2019
       tech:
-        - Go
+        - Golang
         - Scala
         - Python
       summary: ''
@@ -129,7 +138,7 @@ experience:
         - Nov. 2017
         - Apr. 2018
       tech:
-        - Javascript
+        - Javascript (Angular)
       summary: ''
       points:
         - >

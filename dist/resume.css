@@ -15,7 +15,7 @@
     --content-height: calc(var(--page-height) - var(--top-margin)*2);
     /* font sizes */
     /* 48pt = 64px */
-    --title-font-size: 63px;
+    --title-font-size: 64px;
     /* 14pt = 19px */
     --header-font-size: 18px;
     /* 11pt = 16px */
@@ -186,7 +186,6 @@ ul li::before {
 #title-section {
     position: relative;
     height: var(--title-font-size);
-    margin-bottom: -10px;
 }
 
 #title-section > .title {
@@ -195,6 +194,7 @@ ul li::before {
     bottom: 0;
     font: var(--title-font);
     letter-spacing: var(--title-horizontal-padding);
+    margin-bottom: -10px;
 }
 
 #title-section > .links {
@@ -206,6 +206,10 @@ ul li::before {
 
 .links > a {
     display: block;
+}
+
+.summary-wrapper {
+    margin: var(--section-top-padding) 0;
 }
 
 .section-wrapper {
