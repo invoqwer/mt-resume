@@ -1,6 +1,7 @@
 html.zoom
   head
     link(rel='stylesheet', href='resume.css' type='text/css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' integrity='sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==' crossorigin='anonymous' referrerpolicy='no-referrer')
     script(src='resume.js')
   body.body-outline
     a(href=pdfName).accent.downloadpdf ⬇ Download PDF
@@ -9,11 +10,19 @@ html.zoom
         .title #{r.header.title}
         .links
           each l in r.header.links
-            - url = l[1]
-            a(href=url) #{l[0]}
-      if r.summary
-        .summary-wrapper 
-          .text #{r.summary}
+            .link
+              - var [key, name, url] = l
+                span
+                  case key
+                    when "website"
+                      i.fa-solid.fa-earth-americas
+                    when "github"
+                      i.fa-brands.fa-github
+                    when "linkedin"
+                      i.fa-brands.fa-linkedin
+                    when "email"
+                      i.fa-solid.fa-envelope
+                a(href=url) #{name}
       .section-wrapper
         .section-header #{r.education.header}
         .section-line

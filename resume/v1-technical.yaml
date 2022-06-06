@@ -2,12 +2,19 @@ header:
   title: Marcus Tan
   links:
     website:
-      - www.invoker.online
+      - website
+      - invoker.online
       - http://www.invoker.online
     github:
+      - github
       - github.com/invoqwer
       - http://github.com/invoqwer
+    linkedin:
+      - linkedin
+      - linkedin.com/in/marcusmtan
+      - http://www.linkedin.com/in/marcusmtan
     email:
+      - email
       - marcus.m.tan@gmail.com
       - ''
 summary: ''
