@@ -15,13 +15,13 @@ const parseYaml = async (filePath) => {
 
 const __root = path.resolve();
 
-// project config
+// `config.yaml` - project config
 // fields:
-// - resumeVersion
-// - resumeLayout
-// - resumeOutputName
-// - distPath
-// - port
+// - `resumeVersion`
+// - `resumeLayout`
+// - `resumeOutputName`
+// - `distPath`
+// - `port`
 const projectConfigPath = path.join(__root, 'config.yaml');
 const projectConfig = async () => {
   const pcfg = await parseYaml(projectConfigPath);

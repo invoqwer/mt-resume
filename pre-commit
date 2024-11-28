@@ -1,0 +1,10 @@
+#!/bin/sh
+# Pre commit git hook
+
+echo "***** Linting JS files ******"
+
+npm run lint
+
+status=$?
+
+exit $status
