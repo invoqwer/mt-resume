@@ -13,6 +13,7 @@ If running on Windows WSL, see [instructions here](https://github.com/puppeteer/
 - `npm run build` to render pdf to `dist` folder
 
 ## TODO
+- auto re-render pdf when yaml/style change in dev mode
 - styling (Sass?)
 - static site generation -> github pages -> automatically update github hosted 
 page with new resume
