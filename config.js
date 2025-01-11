@@ -15,29 +15,19 @@ const parseYaml = async (filePath) => {
 
 const __root = path.resolve();
 
-// `config.yaml` - project config
-// fields:
-// - `resumeVersion`
-// - `resumeLayout`
-// - `resumeOutputName`
-// - `distPath`
-// - `port`
 const projectConfigPath = path.join(__root, 'config.yaml');
 const projectConfig = async () => {
   const pcfg = await parseYaml(projectConfigPath);
   pcfg.layoutPath = path.join(__root, 'layouts', pcfg.resumeLayout);
-  const resumeYamlPath = path.join(
-      __root, 'resume', `${pcfg.resumeVersion}-${pcfg.resumeLayout}.yaml`);
-  pcfg.resumeYaml = await parseYaml(resumeYamlPath);
+  const resumeContentPath = path.join(
+      __root, 'content', `${pcfg.resumeVersion}-${pcfg.resumeLayout}.yaml`);
+  pcfg.resumeContent = await parseYaml(resumeContentPath);
   pcfg.distPath = path.join(__root, pcfg.distPath);
   log('Project config:');
   log(pcfg);
   return pcfg;
 };
 
-// resume config
-// fields:
-// - removeClass
 const resumeConfig = async (pcfg) => {
   const resumeConfigPath = path.join(pcfg.layoutPath, 'config.yaml');
   const rcfg = await parseYaml(resumeConfigPath);

@@ -16,7 +16,7 @@ const renderPDF = async (pcfg, rcfg, saveFile=false) => {
     // waitUntil: 'domcontentloaded',
     waitUntil: 'networkidle0',
   });
-  // remove debug classes
+  // removeClass
   page.on('console', (consoleObj) => console.log(consoleObj.text()));
   const removeClass = rcfg.removeClass;
   log(`=> Removing Debug Classes: ${removeClass}`);
@@ -29,6 +29,7 @@ const renderPDF = async (pcfg, rcfg, saveFile=false) => {
       }
     });
   }, removeClass);
+  // removeElement
   const removeElement = rcfg.removeElement;
   log(`=> Removing Debug Elements: ${removeElement}`);
   await page.evaluate((cls) => {

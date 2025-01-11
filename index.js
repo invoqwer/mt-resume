@@ -31,7 +31,7 @@ const fontsPath = path.join(__root, 'fonts');
   // html
   app.get('/', async (req, res) => {
     res.render('resume', {
-      r: pcfg.resumeYaml,
+      r: pcfg.resumeContent,
       pdfName: `./${pdfName}`,
     });
   });
