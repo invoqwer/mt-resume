@@ -2,4 +2,4 @@ removeClass:
   - body-outline
   - zoom
 removeElement:
-  - downloadpdf
+  - download-pdf

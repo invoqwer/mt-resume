@@ -12,14 +12,14 @@ const renderPDF = async (pcfg, rcfg, saveFile=false) => {
     args: ['--font-render-hinting=none'],
   });
   const page = await browser.newPage();
-  await page.goto(`http://localhost:${pcfg.port}/`, {
+  await page.goto(`http://localhost:${pcfg.port}`, {
     // waitUntil: 'domcontentloaded',
     waitUntil: 'networkidle0',
   });
   // removeClass
   page.on('console', (consoleObj) => console.log(consoleObj.text()));
   const removeClass = rcfg.removeClass;
-  log(`=> Removing Debug Classes: ${removeClass}`);
+  log(`Removing CSS Classes: ${removeClass}`);
   await page.evaluate((cls) => {
     cls.forEach((tag) => {
       const elems = document.getElementsByClassName(tag);
@@ -31,7 +31,7 @@ const renderPDF = async (pcfg, rcfg, saveFile=false) => {
   }, removeClass);
   // removeElement
   const removeElement = rcfg.removeElement;
-  log(`=> Removing Debug Elements: ${removeElement}`);
+  log(`Removing HTML Elements: ${removeElement}`);
   await page.evaluate((cls) => {
     cls.forEach((tag) => {
       const elems = document.getElementsByClassName(tag);
@@ -43,14 +43,15 @@ const renderPDF = async (pcfg, rcfg, saveFile=false) => {
   }, removeElement);
   // generate pdf
   let pdf;
+  log('Saving webpage as pdf');
   try {
     pdf = await page.pdf({
       // format: 'A4',
       // width: '2480px',
       // height: '3508px',
-      format: 'Letter',
       // width: '2551px',
       // height: '3295px',
+      format: 'Letter',
       path: pdfPath,
       printBackground: true,
       pageRanges: '1',
@@ -65,6 +66,4 @@ const renderPDF = async (pcfg, rcfg, saveFile=false) => {
   return pdf;
 };
 
-export {
-  renderPDF as renderPDF,
-};
+export {renderPDF};

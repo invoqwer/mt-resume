@@ -1,8 +1,10 @@
+import browserSync from 'browser-sync';
 import express from 'express';
 import path from 'path';
 import {resumeConfig, projectConfig} from './config.js';
 import {renderPDF} from './renderpdf.js';
 
+const bs = browserSync.create();
 const log = console.log;
 
 // Select which resume version to render
@@ -16,8 +18,8 @@ const __root = path.resolve();
 const fontsPath = path.join(__root, 'fonts');
 
 (async () => {
-  const pcfg = await projectConfig();
-  const rcfg = await resumeConfig(pcfg);
+  let pcfg = await projectConfig();
+  let rcfg = await resumeConfig(pcfg);
 
   const app = express();
   app.use(express.static(pcfg.layoutPath));
@@ -28,16 +30,24 @@ const fontsPath = path.join(__root, 'fonts');
   const pdfName = `${pcfg.resumeOutputName}.pdf`;
   app.use(`/${pdfName}`, express.static(pdfPath));
 
-  // html
-  app.get('/', async (req, res) => {
+  // dev
+  app.get('/', async (_, res) => {
+    pcfg = await projectConfig();
     res.render('resume', {
       r: pcfg.resumeContent,
       pdfName: `./${pdfName}`,
     });
   });
 
+  // prod
+  app.get('/dist', (_, res) => {
+    res.sendFile(path.join(__root, 'dist', 'index.html'));
+  });
+
   // pdf
-  app.get('/pdf', async (req, res) => {
+  app.get('/pdf', async (_, res) => {
+    pcfg = await projectConfig();
+    rcfg = await resumeConfig(pcfg);
     const pdf = await renderPDF(pcfg, rcfg, false);
     res.set({
       'Content-Type': 'application/pdf',
@@ -45,10 +55,21 @@ const fontsPath = path.join(__root, 'fonts');
       'Content-Disposition': `inline;filename=${pcfg.resumeOutputName}.pdf`,
     });
     res.send(pdf);
+    bs.exit();
   });
 
+  // serve
   app.listen(pcfg.port, () => {
     log(`MT Resume: http://localhost:${pcfg.port}`);
+
+    // browsersync for live reload
+    bs.init({
+      proxy: `localhost:${pcfg.port}`,
+      files: ['**/*.*'], // watch all files
+      port: pcfg.port+1,
+      open: true,
+      notify: false,
+    });
   });
 })();
 

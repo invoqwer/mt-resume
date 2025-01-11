@@ -79,7 +79,7 @@ const copyFolder = async (src, dst) => {
         path.join(pcfg.layoutPath, 'resume.pug'),
     );
     const resumeHTML = resumeTemplate({
-      r: pcfg.resumeYaml,
+      r: pcfg.resumeContent,
       pdfName: `${pcfg.resumeOutputName}.pdf`,
     });
     await writeFile(htmlPath, resumeHTML);
@@ -107,5 +107,6 @@ const copyFolder = async (src, dst) => {
   });
   await sleep(500);
   await renderPDF(pcfg, rcfg, true);
+  await sleep(500);
   server.kill();
 })();

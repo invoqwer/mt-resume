@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "dev": "node index.js",
     "lint": "eslint . --fix",
-    "build": "npm run clean && npm run copy-hook && node build.js",
+    "build": "npm run clean && node build.js",
     "copy-hook": "cp pre-commit .git/hooks/ && chmod +x .git/hooks/pre-commit",
     "clean": "rm -rfv dist/*"
   },
@@ -20,5 +20,8 @@
     "js-yaml": "^4.1.0",
     "pug": "^3.0.2",
     "puppeteer": "^10.4.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.3"
   }
 }

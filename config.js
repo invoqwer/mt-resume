@@ -36,7 +36,4 @@ const resumeConfig = async (pcfg) => {
   return rcfg;
 };
 
-export {
-  projectConfig as projectConfig,
-  resumeConfig as resumeConfig,
-};
+export {projectConfig, resumeConfig};

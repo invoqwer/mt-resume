@@ -1,0 +1,4 @@
+removeClass:
+  - class-to-remove
+removeElement:
+  - element-to-remove
