@@ -89,7 +89,7 @@
     margin-top: calc(var(--html-top-padding)/2);
 }
 
-.downloadpdf {
+.download-pdf {
     border: 1px solid black;
     padding: 10px;
     background-color: var(--page-color);
@@ -99,7 +99,7 @@
     right: 0;
 }
 
-a.downloadpdf {
+a.download-pdf {
     text-decoration: none;
 }
 
