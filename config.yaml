@@ -4,3 +4,10 @@ resumeLayout: technical
 resumeOutputName: MarcusTanResume
 distPath: dist
 port: 8000
+
+# Example Project Config
+# resumeVersion: v1
+# resumeLayout: example
+# resumeOutputName: Example
+# distPath: dist
+# port: 8000

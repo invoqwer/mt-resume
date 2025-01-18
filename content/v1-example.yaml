@@ -1,0 +1,19 @@
+name:
+  header: Your Name
+  summary: >
+    I love to do stuff
+education:
+  header: Education
+  uni: University
+experience:
+  header: Experience
+  experiences:
+    job1:
+      company: Job 1
+      summary: >
+        I did this and that
+    job2:
+      company: Job 2
+      summary: >
+        I did stuff
+

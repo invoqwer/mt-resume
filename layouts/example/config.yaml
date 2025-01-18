@@ -1,4 +1,5 @@
 removeClass:
+  - body-outline
   - class-to-remove
 removeElement:
   - element-to-remove

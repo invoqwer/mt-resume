@@ -1,0 +1,31 @@
+html
+  head
+    //- css
+    link(rel='stylesheet', href='resume.css' type='text/css')
+    //- external fonts
+    link(rel='preconnect', href='https://fonts.googleapis.com')
+    link(rel='preconnect', href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet')
+    script(src='resume.js')
+  body.body-outline
+    #body-wrapper
+      //- name
+      #name.section-wrapper
+        .name-header #{r.name.header}
+        .summary #{r.name.summary}
+      //- education
+      #education.section-wrapper
+        .section-header #{r.education.header}
+        .education-uni #{r.education.uni} 
+      //- experience
+      #experience.section-wrapper
+        .section-header #{r.experience.header}
+        each ex in r.experience.experiences
+          .experience-header #{ex.company}
+          .summary #{ex.summary}
+      div
+        p.element-to-remove
+          | this entire element will be removed when generating pdf
+        p.class-to-remove 
+          | only the class on this element will be removed when generating pdf
+      
