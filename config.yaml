@@ -1,5 +1,5 @@
 # Project Config
-resumeVersion: v1
+resumeVersion: v2
 resumeLayout: technical
 resumeOutputName: MarcusTanResume
 distPath: dist
