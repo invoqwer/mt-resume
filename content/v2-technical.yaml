@@ -1,0 +1,218 @@
+header:
+  title: Marcus Tan
+  links:
+    website:
+      - website
+      - invoqwer.ca
+      - https://invoqwer.ca
+    # github:
+    #   - github
+    #   - github.com/invoqwer
+    #   - http://github.com/invoqwer
+    linkedin:
+      - linkedin
+      - linkedin.com/in/marcusmtan
+      - http://www.linkedin.com/in/marcusmtan
+    email:
+      - email
+      - marcus.m.tan@gmail.com
+      - ''
+summary: ''
+experience:
+  header: Experience
+  experiences:
+    zenith2024:
+      company: Zenith
+      links:
+        website:
+          - zenitharcade.com
+          - https://www.zenitharcade.com/
+      position: Founder
+      location: Vancouver, BC, Canada.
+      dates:
+        - Jun. 2024
+        - Present
+      tech:
+        - Javascript
+      summary: >
+        Zenith imports and leases specialized arcade machines from Japan.
+      points:
+        - >
+          Imported, sold and leased over $200K worth of arcade cabinets to individuals
+          and businesses across Canada.
+        - >
+          Developed hardware and software for a custom card reader and point of
+          sale system to manage arcade credits in a commercial setting.
+          Built front and back end software to manage payments, metrics and bookkeeping.
+        - >
+          Operated a private arcade. Built an accompanying online booking system
+          allowing customers to reserve their time in advance.
+        # - >
+        #   Brought arcade cabinets to anime conventions and student events in
+        #   Vancouver including Fan Expo, Anime Revolution and SFU Summerfest.
+    apple2022:
+      company: Apple
+      links:
+      position: Software Engineer
+      location: Cupertino, CA.
+      dates:
+        - Oct. 2022
+        - Jun. 2024
+      tech:
+        - Objective-C
+      summary: >
+        I worked on a low-level on-device networking daemon whose clients include
+        FaceTime and Shareplay. 
+      points:
+        - >
+          Owned the component responsible for passing spatial persona data in FaceTime calls on VisionOS.
+          Worked intensively with QA to polish call experience leading up to the launch of the VisionPro. 
+        - >
+          Supported a feature to add end-to-end encryption to previously unprotected metadata packet headers.
+        - >
+          Re-factored a key component responsible for managing media encryption key rolling and distribution logic.
+        - >
+          Implemented various metrics to measure connection speed and call quality in FaceTime calls.
+        - >
+          Debugged memory leaks with ASAN, preventing app crashes in edge cases.
+    sgnl2022:
+      company: SGNL.ai
+      links:
+        website:
+          - sgnl.ai
+          - https://sgnl.ai/
+      position: Software Engineer
+      location: Palo Alto, CA.
+      dates:
+        - Apr. 2022
+        - Jul. 2022
+      tech:
+        - Golang
+        - Python
+      points:
+        - >
+          Built a prototype data pipeline to ingest company information from
+          various sources into a Graph database. 
+    rubrik2021:
+      company: Rubrik
+      links:
+        website:
+          - rubrik.com
+          - https://www.rubrik.com/
+      position: Software Engineer
+      location: Palo Alto, CA.
+      dates:
+        - Oct. 2020
+        - Feb. 2022
+      tech:
+        - Scala
+        - Python
+      summary: >
+        I supported the backup and recovery of VMware virtual machines via the
+        Rubrik platform.
+      points:
+        - >
+          Built new integrations allowing Rubrik to support virtual machines
+          backed by third party Flash Arrays (Pure Storage & Dell EMC.)
+        - >
+          Optimized metadata persistence workflows utilized during replication
+          in order to improve garbage collection performance and reduce Rubrik’s
+          memory footprint.
+        - >
+          Rewrote end to end tests and infrastructure in order to improve
+          build quality. Improved component test pipeline pass rate from ~70% to
+          100% which resulted in faster and more qualified builds.
+    rubrik2019:
+      company: Rubrik
+      links:
+        website:
+          - rubrik.com
+          - https://www.rubrik.com/
+      position: Software Engineer Intern
+      location: Palo Alto, CA.
+      dates:
+        - May. 2019
+        - Aug. 2019
+      tech:
+        - Golang
+        - Scala
+        - Python
+      summary: ''
+      points:
+        - >
+          Designed and deployed a Go Thrift server to service internal company
+          VMware API usage. Created API endpoints to support vSphere tagging and
+          I/O filtering. Implemented persistent session management.
+        - >
+          Pushed features to to the Govmomi open source library in order to
+          support specific VMware API endpoints.
+        - >
+          Wrote command line tools, unit testing suites and design documents to
+          ensure project maintainability.
+    rubrik2018:
+      company: Rubrik
+      links:
+        website:
+          - rubrik.com
+          - https://www.rubrik.com/
+      position: Software Engineer Intern
+      location: Palo Alto, CA.
+      dates:
+        - Sept. 2018
+        - Dec. 2018
+      tech:
+        - Scala
+        - C++
+        - Python
+        - Bash
+      summary: ''
+      points:
+        - >
+          Created a feature to enable the recovery of enterprise systems
+          utilizing external data encryption protocols. Accomplished this by
+          implementing extended attribute restoration for VMware virtual
+          machines.
+        - >
+          Supported this feature for both Windows and Linux and implemented 
+          multiple ways for customers to recover their data.
+education:
+  header: Education
+  educations:
+    uoft:
+      institution: The University of Toronto
+      degree: B.Sc Hons, Computer Science
+      location: Toronto, ON.
+      dates:
+        - 2015
+        - 2020
+      summary: ''
+      # summary: Specialist program in Computer Science.
+      points:
+        - >
+          Data Structures & Algorithms, Operating Systems, Functional
+          Programming, Artificial Intelligence
+        - >
+          Teaching Assistant: Computer Organization, Systems Programming, Web
+          Programming
+skills:
+  header: Skills
+  skills:
+    languages:
+      header: Languages
+      points:
+        - Python
+        - C
+        - Objective-C
+        - C++
+        - Scala
+        - Java
+        - Go
+        - Javascript
+        - Bash 
+    # technologies:
+    #   header: Technologies
+    #   points:
+    #     - Networking
+    #     - VMware
+    #     - MongoDB
+    #     - Web Scraping

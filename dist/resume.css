@@ -15,10 +15,10 @@
     --content-height: calc(var(--page-height) - var(--top-margin)*2);
     /* font sizes */
     /* 48pt = 64px */
-    --title-font-size: 70px;
     /* 14pt = 19px */
-    --header-font-size: 18px;
     /* 11pt = 16px */
+    --title-font-size: 80px;
+    --header-font-size: 18px;
     --text-font-size: 14px;
     --accent-font-size: var(--text-font-size);
     /* letter spacing */
@@ -186,10 +186,12 @@ ul li::before {
 
 #title-section {
     position: relative;
-    height: var(--title-font-size);
+    height: calc(var(--title-font-size) - var(--title-font-size)*0.24);
+    margin-bottom: calc(var(--section-bottom-padding)*3);
 }
 
 #title-section > .title {
+    height: calc(var(--title-font-size) - var(--title-font-size)*0.24);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -238,7 +240,7 @@ i {
 .section-wrapper > .section-line {
     position: absolute;
     display: inline-block;
-    width: calc(var(--content-width) - 10px);
+    width: var(--content-width);
     top: calc(var(--header-font-size)/2);
     left: 0;
     border-top: 1px solid;
@@ -250,7 +252,7 @@ i {
 }
 
 .skill-header {
-    margin: 0 0 calc(var(--text-font-size)/2) 0;
+    margin: calc(var(--text-font-size)/2) 0 calc(var(--text-font-size)/2) 0;
     height: var(--text-font-size);
 }
 
