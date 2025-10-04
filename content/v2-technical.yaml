@@ -22,7 +22,7 @@ experience:
   header: Experience
   experiences:
     zenith2024:
-      company: Zenith
+      company: Zenith Arcade
       links:
         website:
           - zenitharcade.com
@@ -35,18 +35,17 @@ experience:
       tech:
         - Javascript
       summary: >
-        Zenith imports and leases specialized arcade machines from Japan.
+        Zenith specializes in importing and restoring Japanese arcade machines.
       points:
         - >
-          Imported, sold and leased over $200K worth of arcade cabinets to individuals
-          and businesses across Canada.
+          Imported, sold, and leased over $300K CAD worth of arcade machines to small businesses across Canada.
         - >
-          Developed hardware and software for a custom card reader and point of
-          sale system to manage arcade credits in a commercial setting.
-          Built front and back end software to manage payments, metrics and bookkeeping.
-        - >
-          Operated a private arcade. Built an accompanying online booking system
-          allowing customers to reserve their time in advance.
+          Performed a wide variety of repairs and upgrades to ensure a high level of customer satisfaction.
+        - > 
+          Developed a custom card reader and point of sale system to manage arcade credits in a commercial setting. Deployed and maintained this system in 3 commercial locations across Canada. Built hardware to manage card transactions and software to manage payments, metrics and bookkeeping.
+        # - >
+        #   Operated a private arcade. Developed an accompanying online booking system
+        #   allowing customers to reserve their time in advance.
         # - >
         #   Brought arcade cabinets to anime conventions and student events in
         #   Vancouver including Fan Expo, Anime Revolution and SFU Summerfest.
@@ -62,11 +61,11 @@ experience:
         - Objective-C
       summary: >
         I worked on a low-level on-device networking daemon whose clients include
-        FaceTime and Shareplay. 
+        FaceTime and SharePlay. 
       points:
         - >
-          Owned the component responsible for passing spatial persona data in FaceTime calls on VisionOS.
-          Worked intensively with QA to polish call experience leading up to the launch of the VisionPro. 
+          Owned the component responsible for delivering spatial persona data in FaceTime calls on VisionOS.
+          Worked intensively with QA to polish the call experience leading up to the launch of the VisionPro. 
         - >
           Supported a feature to add end-to-end encryption to previously unprotected metadata packet headers.
         - >
@@ -144,7 +143,7 @@ experience:
           VMware API usage. Created API endpoints to support vSphere tagging and
           I/O filtering. Implemented persistent session management.
         - >
-          Pushed features to to the Govmomi open source library in order to
+          Pushed features to the Govmomi open source library in order to
           support specific VMware API endpoints.
         - >
           Wrote command line tools, unit testing suites and design documents to
